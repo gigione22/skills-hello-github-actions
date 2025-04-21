@@ -10,11 +10,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Delete a file
-        run: rm -f path/to/your/file.txt
-
+        run: rm -f welcome.yml
       - name: Confirm deletion
         run: |
-          if [ ! -f path/to/your/file.txt ]; then
+          if [ ! -f welcome.yml ]; then
             echo "File deleted successfully."
           else
             echo "File still exists!"
