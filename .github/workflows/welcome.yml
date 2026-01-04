@@ -1,6 +1,14 @@
-name: Post welcome comment
+name: Welcome Workflow Gigi!
+
 on:
-  pull_request:
-    types: [opened]
-permissions:
-  pull-requests: write
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say welcome
+        run: echo "👋 Welcome to my GitHub Actions Gigione workflow!"
